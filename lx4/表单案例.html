@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="表单.css">
+</head>
+
+<body>
+    <div>
+    <form action="" id="formid" class="formclass">
+        <fieldset>
+            <legend>学生档案</legend>
+            <label for="Username">姓名：</label>
+            <input type="text" name="Username" id="Username" placeholder="请输入用户名">
+            <label for="UserPhone">手机号码:</label>
+            <input type="tel" name="UserPhone" id="UserPhone" pattern="^1\d{10}$">
+            <label for="email">电子邮箱:</label>
+            <input type="email" name="email" id="email">
+            <label for="school">所属学院:</label>
+            <input type="text" name="school" id="school" list="cList" placeholder="请选择">
+            <datalist id="cList">
+                <option value="信息工程学院"></option>
+                <option value="艺术学院"></option>
+                <option value="纺织学院"></option>
+                <option value="机械工程学院"></option>
+                <option value="管理学院"></option>
+            </datalist>
+            <label for="grade">入学成绩:</label>
+            <input type="number" max="100" min="0" value="0" name="grade" id="grade">
+            <label for="">基础水平:</label>
+            <meter id="level" max="100" min="0" low="59" high="80"></meter>
+            <label for="indate">入学日期：</label>
+            <input type="date" name="date" id="indate">
+            <label for="leavedate">毕业日期：</label>
+            <input type="date" name="date" id="leavedate">
+            <button>提交</button>
+
+        </fieldset>
+
+    </form>
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+    <span class='a'>4</span>
+    <span class='a'>5</span>
+</div>
+
+    <script>
+        document.getElementById("grade").oninput = function () {
+            document.getElementById("level").value = this.value
+        }
+window.onload = function(){
+// console.log("enter in")
+    console.log('docu id',document.getElementById("formid"))
+        console.log('query class',document.querySelector('.formclass'))
+        console.log('querty id',document.querySelector('#formid'))
+        console.log('query  label',document.querySelector('form'))
+        document.querySelectorAll('.a')
+        document.querySelectorAll('span')
+        alert("警告")
+        confirm("queren")
+
+}
+
+
+    </script>
+</body>
+
+</html>
